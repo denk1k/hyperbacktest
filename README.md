@@ -1,5 +1,6 @@
 # HyperBacktest
 An incredibly overengineered (and blazingly fast!) backtesting framework with a neat UI.
+
 ## Run:
 ### First, you gotta install the dependencies
 `pip3 install -r requirements.txt`
@@ -28,5 +29,9 @@ Take note that you may need to replace headers/cookies for some of the websites 
 * Gittins Index
 * Calmar Divergence (Calmar of the strategy - Calmar of the benchmark)
 #### After all above is done, it saves the trader data to `./my_data/data/caches/caches.csv`, which allows the results to be viewed within the UI.
-
+## Screenshots:
+![Screenshot 2](/screenshots/screen2.png)
+![Screenshot 1](/screenshots/screen1.png)
 P.S. This code is an adaptation from a larger project, so some features are missing. This is not to be used for production purposes, rather just an inspiration for some design choices, perhaps.
+
+
