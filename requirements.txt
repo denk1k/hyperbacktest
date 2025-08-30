@@ -3,3 +3,16 @@ pyarrow
 requests
 pandas
 polars
+plotly
+flask
+tqdm
+nest_asyncio
+numpy
+httpx
+dash_mantine_components
+historical_binance
+flask_restful
+dash_iconify
+memory_profiler
+cachetools
+ray

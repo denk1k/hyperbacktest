@@ -1,3 +1,4 @@
+FLARESOLVERR_PATH = "http://localhost:8819/"
 import os
 import logging
 from memory_profiler import profile
@@ -60,7 +61,7 @@ import polars as pl
 import time
 from cachetools import TTLCache, cached
 import ccxt
-from hlgather import get_hyperliquid_trades, update_hyperliquid_trades
+from hlgather import get_hyperliquid_trades
 import ray
 
 def get_futures_tickers():
@@ -210,7 +211,7 @@ class OpenBookBase():
             print("Path folder created", path)
         return path
 
-    def auth_token_controller(self, api_url="https://flaresolverr-z6zeq3w5la-de.a.run.app/v1", session_name="tester"):
+    def auth_token_controller(self, api_url=FLARESOLVERR_PATH, session_name="tester"):
         self.api_url = api_url
         self.session_name = session_name
 
@@ -342,7 +343,7 @@ class OpenBookBase():
     #             return pair
     #     return key
 
-    def __init__(self, pairlist_limiter:list=None,cache_directory="./my_data/data/caches", flaresolverr_path = "https://flaresolverr-z6zeq3w5la-de.a.run.app/v1", flaresolverr_container="tester", semaphore_compiler=4):
+    def __init__(self, pairlist_limiter:list=None,cache_directory="./my_data/data/caches", flaresolverr_path = FLARESOLVERR_PATH, flaresolverr_container="tester", semaphore_compiler=4):
         self.semaphore_count = semaphore_compiler
         logger.info("HELLO")
         if pairlist_limiter is None:
@@ -1654,7 +1655,7 @@ class OpenBookRemote(OpenBookBase):
 
 
 class OpenBook:
-    def __init__(self, trader_list=None, pairlist_limiter:list=None,cache_directory="./my_data/data/caches", flaresolverr_path = "https://localhost:8819", flaresolverr_container="tester", process_subname="obremote", namespace="orange", semaphore_compiler=4):
+    def __init__(self, trader_list=None, pairlist_limiter:list=None,cache_directory="./my_data/data/caches", flaresolverr_path = FLARESOLVERR_PATH, flaresolverr_container="tester", process_subname="obremote", namespace="orange", semaphore_compiler=4):
 
         self.namespace = namespace
         self.semaphore_count = semaphore_compiler
