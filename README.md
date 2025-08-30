@@ -35,8 +35,9 @@ Based on these ratios it calculates some overall metrics:
 * Performance
 * Rating (based on both Performance and OfficialR, which is the original metric provided from the `hl_trader_ratios.csv` file, with the latter having much smaller weight than the former)
 
+(Just as a note, while these metrics provide a pretty good grasp of how a trader performs, some manual analysis of trades needs to be conducted)
+
 #### After all above is done, it saves the trader data to `./my_data/data/caches/caches.csv`, which allows the results to be viewed within the UI.
 
-P.S. This code is an adaptation from a larger project, so some features are missing. This is not to be used for production purposes(this part of the project has a much higher focus on development speed than code readability), so it is rather to be used just as an inspiration for some design choices, perhaps when it comes to backtest simulation or data downloading(the script here was also adopted for my EE).
-
+P.S. This code is an adaptation from a larger project, so some features are missing. This is not to be used for production purposes(this part of the project has a much higher focus on development speed than code readability), so it is rather to be used just as an inspiration for some design choices, perhaps when it comes to backtest simulation or data downloading(the script here was also adopted for my EE). I am also not responsible for any investment decisions taken due to usage of this tool.
 
