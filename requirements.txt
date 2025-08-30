@@ -1,0 +1,5 @@
+ccxt
+pyarrow
+requests
+pandas
+polars
